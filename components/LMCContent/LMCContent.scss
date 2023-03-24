@@ -1,0 +1,15 @@
+@use '../../node_modules/@lmc-eu/jobs-design-tokens/scss/@tokens.scss' as tokens;
+
+.Content {
+  max-width: 680px;
+  margin: 0 auto;
+  background: tokens.$background-basic;
+}
+
+.Content-cell {
+  padding: tokens.$space-900 tokens.$space-600;
+
+  @media (min-width: tokens.$breakpoint-tablet) {
+    padding: tokens.$space-900;
+  }
+}

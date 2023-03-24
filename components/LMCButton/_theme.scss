@@ -1,0 +1,71 @@
+@use '../../node_modules/@lmc-eu/jobs-design-tokens/scss/@tokens.scss' as tokens;
+
+// We subtract the border width to achieve the same dimensions as other form elements
+$typography: tokens.$body-medium-text-bold;
+$border-width: tokens.$border-width-100;
+$border-style: tokens.$border-style-100;
+$border-radius: tokens.$radius-100;
+$breakpoints: tokens.$breakpoints;
+
+// Primary button
+$primary-default-color: tokens.$text-primary-inverted-default;
+$primary-default-background: tokens.$action-primary-default;
+$primary-default-border-color: $primary-default-background;
+$primary-hover-color: $primary-default-color;
+$primary-hover-background: tokens.$action-primary-hover;
+$primary-hover-border-color: $primary-hover-background;
+$primary-active-color: $primary-default-color;
+$primary-active-background: tokens.$action-primary-active;
+$primary-active-border-color: $primary-active-background;
+$primary-disabled-color: tokens.$text-primary-inverted-disabled;
+$primary-disabled-background: tokens.$action-primary-disabled;
+$primary-disabled-border-color: $primary-disabled-background;
+
+$primary: (
+    default-color: $primary-default-color,
+    default-background: $primary-default-background,
+    default-border-color: $primary-default-border-color,
+    hover-color: $primary-hover-color,
+    hover-background: $primary-hover-background,
+    hover-border-color: $primary-hover-border-color,
+    active-color: $primary-active-color,
+    active-background: $primary-active-background,
+    active-border-color: $primary-active-border-color,
+    disabled-color: $primary-disabled-color,
+    disabled-background: $primary-disabled-background,
+    disabled-border-color: $primary-disabled-border-color,
+);
+
+// Secondary button
+$secondary-default-color: tokens.$text-primary-default;
+$secondary-default-background: tokens.$background-interactive-default;
+$secondary-default-border-color: tokens.$action-secondary-default;
+$secondary-hover-color: $secondary-default-color;
+$secondary-hover-background: tokens.$background-interactive-hover;
+$secondary-hover-border-color: tokens.$action-secondary-hover;
+$secondary-active-color: $secondary-default-color;
+$secondary-active-background: tokens.$background-interactive-active;
+$secondary-active-border-color: tokens.$action-secondary-active;
+$secondary-disabled-color: tokens.$text-primary-disabled;
+$secondary-disabled-background: $secondary-default-background;
+$secondary-disabled-border-color: tokens.$action-secondary-disabled;
+
+$secondary: (
+    default-color: $secondary-default-color,
+    default-background: $secondary-default-background,
+    default-border-color: $secondary-default-border-color,
+    hover-color: $secondary-hover-color,
+    hover-background: $secondary-hover-background,
+    hover-border-color: $secondary-hover-border-color,
+    active-color: $secondary-active-color,
+    active-background: $secondary-active-background,
+    active-border-color: $secondary-active-border-color,
+    disabled-color: $secondary-disabled-color,
+    disabled-background: $secondary-disabled-background,
+    disabled-border-color: $secondary-disabled-border-color,
+);
+
+$variants: (
+    primary: $primary,
+    secondary: $secondary,
+);

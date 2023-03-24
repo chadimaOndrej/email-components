@@ -1,0 +1,9 @@
+@use '../../node_modules/@lmc-eu/jobs-design-tokens/scss/@tokens.scss' as tokens;
+
+.Page {
+  background-color: tokens.$background-cover;
+
+  @media (min-width: tokens.$breakpoint-tablet) {
+    padding-top: tokens.$space-900;
+    padding-bottom: 100px;  }
+}
