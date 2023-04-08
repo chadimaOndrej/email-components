@@ -1,0 +1,5 @@
+@use '@tokens' as tokens;
+
+$primary: tokens.$text-primary-default;
+$secondary: tokens.$text-secondary-default;
+$inverted: tokens.$text-primary-inverted-default;

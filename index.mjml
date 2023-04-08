@@ -1,0 +1,20 @@
+<mjml>
+  <mj-head>
+      <!-- <mjc-scss styleFileName="Page" inline /> -->
+  </mj-head>
+  <mj-body css-class="Page" width="680px">
+    <!-- The first component, mj-basic-component renders as a column child -->
+    <mjc-header src="https://ijobs.cz/static/images/email/logo-jobs.png?1" imageAlt="jobs.cz logo" href="www.seznam.cz" />
+    
+    <mjc-content>
+      <mj-column>
+        <mjc-heading title="Ověření emailové adresy" hasSpacing="true" />
+        <mj-text color="red">
+          A super nice layout component
+        </mj-text>
+
+        <mjc-button href="www.seznam.cz">Potvrdit e-mailovou adresu</mjc-button>
+      </mj-column>
+    </mjc-content>
+  </mj-body>
+</mjml>

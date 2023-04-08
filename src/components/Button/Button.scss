@@ -1,0 +1,51 @@
+@use '@tokens' as tokens;
+@use 'theme';
+@use 'tools';
+
+.Button {
+    width: 100%;
+    border: 0;
+    border-collapse: separate;
+    line-height: 100%;
+
+    @media (min-width: tokens.$breakpoint-tablet) {
+        width: auto;
+    }
+}
+
+.Button__cell {
+    border: none;
+    mso-padding-alt: tokens.$space-400;
+    border-radius: theme.$border-radius;
+    cursor: auto;
+
+    @media (min-width: tokens.$breakpoint-tablet) {
+        mso-padding-alt: tokens.$space-400 calc(#{tokens.$space-1000} + #{tokens.$space-400});
+    }
+}
+
+.Button__button {
+    display: block;
+    padding: tokens.$space-400;
+    mso-padding-alt: 0px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-width: theme.$border-width;
+    border-style: theme.$border-style;
+    border-radius: theme.$border-radius;
+    user-select: none;
+    cursor: pointer;
+
+    @media (min-width: tokens.$breakpoint-tablet) {
+        padding: tokens.$space-400 calc(#{tokens.$space-1000} + #{tokens.$space-400});
+        line-height: 1.8;
+    }
+}
+
+@each $variant, $variables in theme.$variants {
+    @include tools.variant($variant, $variables);
+}

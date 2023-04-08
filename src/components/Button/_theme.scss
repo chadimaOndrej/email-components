@@ -1,0 +1,32 @@
+@use '@tokens' as tokens;
+
+$border-width: tokens.$border-width-100;
+$border-style: tokens.$border-style-100;
+$border-radius: tokens.$radius-100;
+
+// Primary button
+$primary-default-color: tokens.$text-primary-inverted-default;
+$primary-default-background: tokens.$action-primary-default;
+$primary-default-border-color: $primary-default-background;
+
+$primary: (
+    default-color: $primary-default-color,
+    default-background: $primary-default-background,
+    default-border-color: $primary-default-border-color,
+);
+
+// Secondary button
+$secondary-default-color: tokens.$text-primary-default;
+$secondary-default-background: tokens.$background-interactive-default;
+$secondary-default-border-color: tokens.$action-secondary-default;
+
+$secondary: (
+    default-color: $secondary-default-color,
+    default-background: $secondary-default-background,
+    default-border-color: $secondary-default-border-color,
+);
+
+$variants: (
+    primary: $primary,
+    secondary: $secondary,
+);

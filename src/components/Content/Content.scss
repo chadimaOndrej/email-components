@@ -1,0 +1,15 @@
+@use '@tokens' as tokens;
+
+.Content {
+    max-width: 680px;
+    margin: 0 auto;
+    background: tokens.$background-basic;
+}
+
+.Content__cell {
+    padding: tokens.$space-900 tokens.$space-600;
+
+    @media (min-width: tokens.$breakpoint-tablet) {
+        padding: tokens.$space-900;
+    }
+}

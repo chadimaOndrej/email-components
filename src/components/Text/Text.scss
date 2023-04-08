@@ -1,0 +1,35 @@
+@use '@tokens' as tokens;
+@use 'theme';
+
+.Text {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.8;
+
+    @media (min-width: tokens.$breakpoint-tablet) {
+        font-size: 16px;
+    }
+}
+
+.Text--primary {
+    color: theme.$primary;
+}
+
+.Text--secondary {
+    color: theme.$secondary;
+}
+
+.Text--inverted {
+    color: theme.$inverted;
+}
+
+.Text--small {
+    font-size: 14px;
+    line-height: 1.4;
+
+    @media (min-width: tokens.$breakpoint-tablet) {
+        font-size: 14px;
+    }
+}

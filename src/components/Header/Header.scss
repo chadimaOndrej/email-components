@@ -1,0 +1,14 @@
+@use 'sass:meta';
+@use '@tokens' as tokens;
+
+.Header {
+}
+
+.Header__column {
+    background-color: tokens.$brand-primary;
+    background: if( meta.global-variable-exists(gradient-diagonal, tokens), tokens.$gradient-diagonal, tokens.$brand-primary);
+}
+
+.Header__image {
+    padding: tokens.$space-700;
+}
