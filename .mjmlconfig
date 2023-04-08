@@ -1,9 +1,0 @@
-{
-  "packages": [
-    "./libs/LMCButton/LMCButton.compiled.js",
-    "./libs/LMCContent/LMCContent.compiled.js",
-    "./libs/LMCHeader/LMCHeader.compiled.js",
-    "./libs/Heading/Heading.compiled.js",
-    "./libs/LMCSass/LMCSass.compiled.js"
-  ]
-}

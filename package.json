@@ -1,19 +1,34 @@
 {
-  "name": "lmc-email-components",
+  "name": "@lmc-eu/email-components",
+  "version": "0.0.1",
+  "description": "CSS and vanilla JS implementation of Spirit Design System",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
   "repository": {
     "type": "git",
     "url": ""
   },
-  "version": "0.0.1",
-  "description": "",
   "source": "src/index.ts",
   "main": "lib/index.js",
   "scripts": {
-    "watch": "gulp watch",
-    "build": "gulp build",
-    "postinstall": "npm run build",
-    "lint": "eslint components",
-    "buildtemplate": "mjml input.mjml -o output.html"
+    "css:compile": "sass --load-path=node_modules/@lmc-eu/spirit-design-tokens/scss src:dist",
+    "css:compile:watch": "sass --watch --load-path=node_modules/@lmc-eu/spirit-design-tokens/scss src:dist",
+    "es:lint": "eslint ./",
+    "es:lint:fix": "yarn es:lint --fix",
+    "format": "yarn format:check",
+    "format:check": "prettier --check ./",
+    "format:fix": "prettier --write ./",
+    "format:fix:changelog": "prettier --write ./CHANGELOG.md",
+    "postinstall": "yarn build",
+    "registerComponents": "node registerComponents.js",
+    "build": "yarn build:scripts && yarn css:compile",
+    "build:scripts": "tsc",
+    "prebuild:template": "yarn build",
+    "build:template": "mjml index.mjml -o index.html",
+    "buildWebpack": "webpack --config ./webpack.config.js --mode development"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -27,21 +42,30 @@
     "@types/jest": "^27.0.3",
     "@types/mjml": "^4.7.0",
     "@types/mjml-core": "^4.7.1",
+    "@types/node": "^18.15.10",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
     "eslint": "^8.36.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "fancy-log": "^2.0.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-watch": "^5.0.1",
-    "typescript": "^4.5.4"
+    "node-sass": "^8.0.0",
+    "prettier": "^2.8.7",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "@lmc-eu/jobs-design-tokens": "^1.6.1",
+    "@lmc-eu/eslint-config-react": "^1.1.1",
     "@lmc-eu/spirit-design-tokens": "^0.25.2",
+    "eslint-config-prettier": "^8.8.0",
     "lodash": "^4.17.21",
     "mjml": "^4.13.0",
     "mjml-core": "^4.13.0",
-    "sass": "^1.58.3"
+    "mjml-validator": "^4.13.0",
+    "sass": "^1.60.0",
+    "yarn": "^1.22.19"
   }
 }
