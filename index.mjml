@@ -8,12 +8,13 @@
     
     <mjc-content>
       <mj-column>
-        <mjc-heading title="Ověření emailové adresy" hasSpacing="true" />
-        <mj-text color="red">
-          A super nice layout component
-        </mj-text>
+        <mjc-heading title="Ověření emailové adresy" hasSpacing="true"></mjc-heading>  
+        <mjc-text>A super nice layout component</mjc-text>
+        <mjc-text padding-top="24px" color="secondary" size="small">Small text component, small text component, <strong>bold text</strong></mjc-text>
 
-        <mjc-button href="www.seznam.cz">Potvrdit e-mailovou adresu</mjc-button>
+        <mjc-link href="https://seznam.cz" color="secondary">Odkaz</mjc-link>
+        <mjc-button href="https:/seznam.cz">Potvrdit e-mailovou adresu</mjc-button>
+
       </mj-column>
     </mjc-content>
   </mj-body>

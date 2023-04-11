@@ -1,31 +1,32 @@
 @use '@tokens' as tokens;
 @use 'theme';
 
-.Text {
+.Link {
     font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.8;
+    text-decoration: underline;
 
     @media (min-width: tokens.$breakpoint-tablet) {
         font-size: 16px;
     }
 }
 
-.Text--primary {
+.Link--primary {
     color: theme.$primary;
 }
 
-.Text--secondary {
+.Link--secondary {
     color: theme.$secondary;
 }
 
-.Text--inverted {
+.Link--inverted {
     color: theme.$inverted;
 }
 
-.Text--small {
+.Link--small {
     font-size: 14px;
     line-height: 1.4;
 

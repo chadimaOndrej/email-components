@@ -4,6 +4,7 @@
     "./dist/components/Content/Content.js",
     "./dist/components/Header/Header.js",
     "./dist/components/Heading/Heading.js",
+    "./dist/components/Link/Link.js",
     "./dist/components/Scss/Scss.js",
     "./dist/components/Text/Text.js"
   ]

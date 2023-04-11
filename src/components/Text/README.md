@@ -3,7 +3,7 @@
 The Text component to render text.
 
 ```mjml
-<mjc-text color="seconrady" size="small" />
+<mjc-text color="seconrady" size="small">Text text text text</mjc-text>
 ```
 
 ## Available props

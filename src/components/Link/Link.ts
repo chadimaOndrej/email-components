@@ -3,9 +3,9 @@ import { loadStyles } from '../../helpers/loadStyles';
 const { registerDependencies } = require('mjml-validator');
 
 registerDependencies({
-  'mj-column': ['mjc-text'],
-  'mjc-content': ['mjc-text'],
-  'mjc-text': [],
+  'mj-column': ['mjc-link'],
+  'mjc-content': ['mjc-link'],
+  'mjc-link': [],
 });
 
 export default class MjcText extends BodyComponent {
@@ -18,19 +18,23 @@ export default class MjcText extends BodyComponent {
     this.color = this.getAttribute('color');
     this.size = this.getAttribute('size');
   }
-  static componentName = 'mjc-text';
+  static componentName = 'mjc-link';
   static endingTag = true;
   static dependencies = {
-    'mj-column': ['mjc-text'],
-    'mjc-text': [],
+    'mj-column': ['mjc-link'],
+    'mjc-link': [],
   };
 
   static allowedAttributes = {
     align: 'enum(left,right,center)',
     color: 'enum(primary,secondary,inverted)',
+    'data-msys-linkname': 'string',
+    href: 'string',
     'padding-bottom': 'unit(px,%)',
     'padding-top': 'unit(px,%)',
     padding: 'unit(px,%){1,4}',
+    rel: 'string',
+    target: 'string',
     size: 'enum(small,medium)',
   };
 
@@ -38,17 +42,27 @@ export default class MjcText extends BodyComponent {
     align: 'left',
     color: 'primary',
     size: 'medium',
+    target: '_blank',
   };
 
-  headStyle = () => loadStyles(`${__dirname}/Text.css`);
+  headStyle = () => loadStyles(`${__dirname}/Link.css`);
 
   render() {
-    const className = `Text Text--${this.size} Text--${this.color}`;
+    const className = `Link Link--${this.size} Link--${this.color}`;
 
     return `
-      <div class="${className}">
+      <a
+        ${this.htmlAttributes({
+          class: className,
+          href: this.getAttribute('href'),
+          rel: this.getAttribute('rel'),
+          name: this.getAttribute('name'),
+          target: this.getAttribute('target'),
+          'data-msys-linkname': this.getAttribute('data-msys-linkname'),
+        })}
+      >
         ${this.getContent()}
-      </div>
+      </a>
     `
   }
 }

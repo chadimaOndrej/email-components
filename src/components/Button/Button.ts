@@ -38,7 +38,6 @@ export default class Button extends BodyComponent {
   static defaultAttributes = {
     align: 'left',
     color: 'primary',
-    name: 'string',
     'padding-bottom': '32px',
     'padding-left': '0',
     'padding-right': '0',
