@@ -14,4 +14,4 @@ The Heading component provides helper classes to render headings.
 | `elementType` | `HTMLElement`              | `div`    | HTML tag,        |
 | `hasSpacing`  | `boolean`                  | `false`  | Bottom spacing   |
 | `size`        | `small \| medium \| large` | `medium` | Size of the text |
-| `title`       | `string`                   | `""`     | Title            |
+| `title`       | `string`                   |          | Title            |

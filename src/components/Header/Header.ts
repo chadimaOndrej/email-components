@@ -21,8 +21,8 @@ export default class Header extends BodyComponent {
   private readonly imageAlt: string;
   private readonly href: string;
 
-  constructor(initialDatas = {}) {
-    super(initialDatas);
+  constructor(initialData = {}) {
+    super(initialData);
 
     this.src = this.getAttribute('src');
     this.imageAlt = this.getAttribute('imageAlt');
@@ -33,9 +33,9 @@ export default class Header extends BodyComponent {
 
   static dependencies = {
     'mj-body': ['mjc-header'],
-    'mj-wraper': ['mjc-header'],
-    'mj-section': ['mjc-header'],
     'mj-column': ['mjc-header'],
+    'mj-section': ['mjc-header'],
+    'mj-wraper': ['mjc-header'],
   };
 
   static allowedAttributes: Props = {
@@ -55,7 +55,7 @@ export default class Header extends BodyComponent {
   render() {
     return this.renderMJML(`
       <mj-section css-class="Header" padding="0">
-        <mj-column css-class="Header__column" padding="21px">
+        <mj-column css-class="Header__column" padding="22px">
           <mj-image
             alt="${this.imageAlt}"
             css-class="Header__image"

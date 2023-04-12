@@ -12,8 +12,8 @@ export default class MjcText extends BodyComponent {
   private readonly color: string;
   private readonly size: string;
 
-  constructor(initialDatas = {}) {
-    super(initialDatas);
+  constructor(initialData = {}) {
+    super(initialData);
 
     this.color = this.getAttribute('color');
     this.size = this.getAttribute('size');

@@ -2,7 +2,6 @@
 
 The Content is component for e-mail content layout.
 
-
 ```mjml
 <mjc-content></mjc-content>
 ```
@@ -11,4 +10,4 @@ The Content is component for e-mail content layout.
 
 | Name       | Type          | Default | Description |
 | ---------- | ------------- | ------- | ----------- |
-| `children` | `MJMLElement` | `null`  |             |
+| `children` | `MJMLElement` | `null`  | Any element |

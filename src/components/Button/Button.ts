@@ -11,8 +11,8 @@ registerDependencies({
 export default class Button extends BodyComponent {
   private readonly color: string;
 
-  constructor(initialDatas = {}) {
-    super(initialDatas);
+  constructor(initialData = {}) {
+    super(initialData);
 
     this.color = this.getAttribute('color');
   }

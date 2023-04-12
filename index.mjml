@@ -4,7 +4,7 @@
   </mj-head>
   <mj-body css-class="Page" width="680px">
     <!-- The first component, mj-basic-component renders as a column child -->
-    <mjc-header src="https://ijobs.cz/static/images/email/logo-jobs.png?1" imageAlt="jobs.cz logo" href="www.seznam.cz" />
+    <mjc-header src="https://ijobs.cz/static/images/email/logo-jobs.png?1" imageAlt="jobs.cz logo" href="https://jobs.cz" />
     
     <mjc-content>
       <mj-column>
@@ -12,10 +12,9 @@
         <mjc-text>A super nice layout component</mjc-text>
         <mjc-text padding-top="24px" color="secondary" size="small">Small text component, small text component, <strong>bold text</strong></mjc-text>
 
-        <mjc-link href="https://seznam.cz" color="secondary">Odkaz</mjc-link>
-        <mjc-button href="https:/seznam.cz">Potvrdit e-mailovou adresu</mjc-button>
+        <mjc-link href="https://jobs.cz" color="secondary">Odkaz</mjc-link>
+        <mjc-button href="https:/jobs.cz">Potvrdit e-mailovou adresu</mjc-button>
 
       </mj-column>
     </mjc-content>
-  </mj-body>
 </mjml>

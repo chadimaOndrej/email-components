@@ -27,7 +27,7 @@
     "build": "yarn build:scripts && yarn css:compile",
     "build:scripts": "tsc",
     "prebuild:template": "yarn build",
-    "build:template": "mjml index.mjml -o index.html",
+    "build:template": "mjml index.mjml -o index.html && mjml ./templates/**.mjml -o ./html-output/",
     "buildWebpack": "webpack --config ./webpack.config.js --mode development"
   },
   "devDependencies": {

@@ -10,8 +10,6 @@ registerDependencies({
 
 export default class Content extends BodyComponent {
   static componentName = 'mjc-content';
-  static allowedAttributes = {};
-  static defaultAttributes = {};
 
   headStyle = () => loadStyles(`${__dirname}/Content.css`);
 

@@ -33,7 +33,7 @@ export default class Sass extends HeadComponent {
       throw new Error(`Can't find scss file at ${filePath} (From)`);
     }
 
-    const scss = compile(filePath).css.toString();
+    const scss = compile(filePath, { 'loadPaths': ['node_modules/@lmc-eu/spirit-design-tokens/scss'] }).css.toString();
 
     add(this.getAttribute('inline') === 'inline' ? 'inlineStyle' : 'style', scss);
   }

@@ -10,7 +10,7 @@
     text-decoration: underline;
 
     @media (min-width: tokens.$breakpoint-tablet) {
-        font-size: 1ápx;
+        font-size: 18px;
     }
 }
 
@@ -29,8 +29,4 @@
 .Link--small {
     font-size: 14px;
     line-height: 1.4;
-
-    @media (min-width: tokens.$breakpoint-tablet) {
-        font-size: 14px;
-    }
 }

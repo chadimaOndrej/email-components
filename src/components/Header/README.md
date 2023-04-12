@@ -8,8 +8,8 @@ The Header is component for e-mail header with company logo.
 
 ## Available props
 
-| Prop name  | Type     | Default | Required | Description            |
-| ---------- | -------- | ------- | -------- | ---------------------- |
-| `src`      | `string` | -       | yes      | Url to image           |
-| `imageAlt` | `string` | -       | no       | Image alt descriptions |
-| `href`     | `string` | -       | no       | Link to web on image   |
+| Prop name  | Type     | Default | Required | Description           |
+| ---------- | -------- | ------- | -------- | --------------------- |
+| `src`      | `string` | -       | yes      | Url to image          |
+| `imageAlt` | `string` | -       | no       | Image alt description |
+| `href`     | `string` | -       | no       | Link to web on image  |
