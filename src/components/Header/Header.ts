@@ -10,23 +10,23 @@ registerDependencies({
   'mjc-header': [''],
 });
 
-interface Props {
-  src: string;
-  imageAlt?: string;
-  href?: string;
-}
-
 export default class Header extends BodyComponent {
-  private readonly src: string;
+  private readonly align: string;
+  private readonly externalLink: string;
+  private readonly height: string;
   private readonly imageAlt: string;
-  private readonly href: string;
+  private readonly imageUrl: string;
+  private readonly width: string;
 
   constructor(initialData = {}) {
     super(initialData);
 
-    this.src = this.getAttribute('src');
+    this.align = this.getAttribute('align');
+    this.externalLink = this.getAttribute('externalLink');
+    this.height = this.getAttribute('height');
     this.imageAlt = this.getAttribute('imageAlt');
-    this.href = this.getAttribute('href');
+    this.imageUrl = this.getAttribute('imageUrl');
+    this.width = this.getAttribute('width');
   }
 
   static componentName = 'mjc-header';
@@ -38,16 +38,22 @@ export default class Header extends BodyComponent {
     'mj-wraper': ['mjc-header'],
   };
 
-  static allowedAttributes: Props = {
-    src: 'string',
+  static allowedAttributes = {
+    alight: 'enum(left,right,center)',
+    height: 'unit(px,%)',
+    externalLink: 'string',
     imageAlt: 'string',
-    href: 'string',
+    imageUrl: 'string',
+    width: 'unit(px,%)',
   };
 
   static defaultAttributes = {
-    src: '',
+    align: 'center',
+    height: '24px',
+    externalLink: '',
     imageAlt: '',
-    href: '',
+    imageUrl: '',
+    width: '60px',
   };
 
   headStyle = () => loadStyles(`${__dirname}/Header.css`);
@@ -57,13 +63,13 @@ export default class Header extends BodyComponent {
       <mj-section css-class="Header" padding="0">
         <mj-column css-class="Header__column" padding="22px">
           <mj-image
+            align="${this.align}"
             alt="${this.imageAlt}"
             css-class="Header__image"
-            src="${this.src}"
-            width="60px"
-            height="24px"
-            align="center"
-            href="${this.href}"
+            height="${this.height}"
+            href="${this.externalLink}"
+            imageUrl="${this.imageUrl}"
+            width="${this.width}"
           />
         </mj-column>
       </mj-section>

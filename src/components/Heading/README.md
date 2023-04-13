@@ -1,6 +1,6 @@
 # Heading
 
-The Heading component provides helper classes to render headings.
+The `mjc-heading` component is to create e-mail headings.
 
 ```mjml
 <mjc-heading elementType="h1" size="large" />

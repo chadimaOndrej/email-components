@@ -48,7 +48,7 @@ export default class Heading extends BodyComponent {
   headStyle = () => loadStyles(`${__dirname}/Heading.css`);
 
   render() {
-    const className = `Heading Heading--${this.size}${this.hasSpacing ? ' Heading--space' : ''}`;
+    const className = `Heading Heading--${this.size}${this.hasSpacing ? ' Heading--hasBottomSpacing' : ''}`;
 
     return `
       <table
@@ -56,12 +56,13 @@ export default class Heading extends BodyComponent {
         cellpadding="0"
         cellspacing="0"
         role="presentation"
-        class="Button"
       >
         <tbody>
           <tr>
             <td role="presentation">
-              <${this.elementType} class='${className}'>${this.title}</${this.elementType}>
+              <${this.elementType} class="${className}">
+                ${this.title}
+              </${this.elementType}>
             </td>
           </tr>
         </tbody>

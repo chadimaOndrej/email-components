@@ -1,0 +1,7 @@
+@use 'sass:map';
+@use '@tokens' as tokens;
+
+$breakpoint: tokens.$breakpoint-tablet;
+
+$heading-padding-bottom-mobile: tokens.$space-700;
+$heading-padding-bottom: tokens.$space-800;

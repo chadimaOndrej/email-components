@@ -1,4 +1,4 @@
-@use '@tokens' as tokens;
+@use 'theme';
 
 .Heading {
     font-family: Arial, sans-serif;
@@ -7,11 +7,11 @@
     line-height: 1.2;
 }
 
-.Heading--space {
-    padding-bottom: tokens.$space-700;
+.Heading--hasBottomSpacing {
+    padding-bottom: theme.$heading-padding-bottom-mobile;
 
-    @media (min-width: tokens.$breakpoint-tablet) {
-        padding-bottom: tokens.$space-800;
+    @media (min-width: theme.$breakpoint) {
+        padding-bottom: theme.$heading-padding-bottom;
     }
 }
 
@@ -22,7 +22,7 @@
 .Heading--medium {
     font-size: 26px;
 
-    @media (min-width: tokens.$breakpoint-tablet) {
+    @media (min-width: theme.$breakpoint) {
         font-size: 28px;
     }
 }

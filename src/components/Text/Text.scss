@@ -1,4 +1,3 @@
-@use '@tokens' as tokens;
 @use 'theme';
 
 .Text {
@@ -8,7 +7,7 @@
     font-size: 16px;
     line-height: 1.8;
 
-    @media (min-width: tokens.$breakpoint-tablet) {
+    @media (min-width: theme.$breakpoint) {
         font-size: 18px;
     }
 }

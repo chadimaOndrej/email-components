@@ -1,6 +1,6 @@
 # BUTTON
 
-The Button component is button for e-mail template.
+The `mjc-button` component is button for e-mail template.
 
 ```mjml
 <mjc-button href="www.jobs.cz">Potvrdit e-mailovou adresu</mjc-button>
@@ -13,8 +13,7 @@ The Button component is button for e-mail template.
 | `align`          | `left \| right \| center` | `left`    | no       | Button position |
 | `href`           | `string`                  | -         | no       | Link to         |
 | `color`          | `primary \| secondary`    | `primary` | yes      | Url to image    |
-| `padding-bottom` | `unit(px,%)`              | `32px`    | no       | bottom spacing  |
-| `padding-top`    | `unit(px,%)`              | `32px`    | no       | top spacing     |
+| `padding-bottom` | `unit(px,%)`              | `32px`    | no       | Bottom spacing  |
+| `padding-top`    | `unit(px,%)`              | `32px`    | no       | Top spacing     |
 | `rel`            | `string`                  | -         | no       |                 |
-| `target`         | `string`                  | `_blank`  | no       |                 |
-| `vertical-align` | `top \| bottom \| middle` | `middle`  | no       | Button position |
+| `vertical-align` | `top \| bottom \| middle` | `middle`  | no       | Bottom position |

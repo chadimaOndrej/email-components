@@ -34,7 +34,6 @@ export default class MjcText extends BodyComponent {
     'padding-top': 'unit(px,%)',
     padding: 'unit(px,%){1,4}',
     rel: 'string',
-    target: 'string',
     size: 'enum(small,medium)',
   };
 
@@ -42,7 +41,6 @@ export default class MjcText extends BodyComponent {
     align: 'left',
     color: 'primary',
     size: 'medium',
-    target: '_blank',
   };
 
   headStyle = () => loadStyles(`${__dirname}/Link.css`);
@@ -57,12 +55,13 @@ export default class MjcText extends BodyComponent {
           href: this.getAttribute('href'),
           rel: this.getAttribute('rel'),
           name: this.getAttribute('name'),
-          target: this.getAttribute('target'),
           'data-msys-linkname': this.getAttribute('data-msys-linkname'),
         })}
       >
-        ${this.getContent()}
+        <span class="${className}">
+          ${this.getContent()}
+        </span>
       </a>
-    `
+    `;
   }
 }

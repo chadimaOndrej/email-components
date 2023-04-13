@@ -3,5 +3,4 @@
  */
 module.exports = {
     extends: ['@lmc-eu/stylelint-config', 'stylelint-prettier/recommended'],
-    ignoreFiles: [],
 };

@@ -1,6 +1,6 @@
 # CONTENT
 
-The Content is component for e-mail content layout.
+The `mjc-content` is component for e-mail content layout.
 
 ```mjml
 <mjc-content></mjc-content>

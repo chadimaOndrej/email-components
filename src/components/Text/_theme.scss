@@ -1,4 +1,7 @@
+@use 'sass:map';
 @use '@tokens' as tokens;
+
+$breakpoint: tokens.$breakpoint-tablet;
 
 $primary: tokens.$text-primary-default;
 $secondary: tokens.$text-secondary-default;

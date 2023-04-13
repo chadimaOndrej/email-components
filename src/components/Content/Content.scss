@@ -1,15 +1,15 @@
-@use '@tokens' as tokens;
+@use 'theme';
 
 .Content {
     max-width: 680px;
     margin: 0 auto;
-    background: tokens.$background-basic;
+    background: theme.$content-background;
 }
 
 .Content__cell {
-    padding: tokens.$space-900 tokens.$space-600;
+    padding: theme.$content-padding-mobile;
 
-    @media (min-width: tokens.$breakpoint-tablet) {
-        padding: tokens.$space-900;
+    @media (min-width: theme.$breakpoint) {
+        padding: theme.$content-padding;
     }
 }

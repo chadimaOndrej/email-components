@@ -1,16 +1,20 @@
 <mjml>
   <mj-head>
-      <mjc-scss fileUrl="templates/scss/Page.scss" inline />
+    <mjc-style-scss fileUrl="templates/scss/Page.scss" inline />
   </mj-head>
-  <mj-body css-class="Page" width="680px">   
+  <mj-body css-class="Page" width="680px">
     <mjc-content>
       <mj-column>
         <mj-spacer height="80px" />
         <mj-text><strong>COMPONENT: Header</strong></mj-text>
       </mj-column>
     </mjc-content>
-    <mjc-header src="https://ijobs.cz/static/images/email/logo-jobs.png?1" imageAlt="jobs.cz logo" href="https://jobs.cz" />
-    
+    <mjc-header
+      imageUrl="https://ijobs.cz/static/images/email/logo-jobs.png?1"
+      imageAlt="jobs.cz logo"
+      externalLink="https://jobs.cz"
+    />
+
     <mjc-content>
       <mj-column>
         <mj-spacer height="100px" />
@@ -25,9 +29,11 @@
         <mj-text><strong>COMPONENT: Text</strong></mj-text>
         <mj-spacer height="10px" />
         <mjc-text>Medium text</mjc-text>
-        <mjc-text color="secondary" size="small">Medium text with secondary color, <mj-text><strong>strong text</strong></mj-text></mjc-text>
+        <mjc-text color="secondary" size="small">Medium text with secondary color, <mj-text><strong>strong text</strong></mj-text>
+        </mjc-text>
         <mjc-text size="small">Small text</mjc-text>
-        <mjc-text color="secondary" size="small">Small text component with secondary color, <mj-text><strong>strong text</strong></mj-text></mjc-text>
+        <mjc-text color="secondary" size="small">Small text component with secondary color, <mj-text><strong>strong text</strong></mj-text>
+        </mjc-text>
 
 
         <mj-spacer height="150px" />
@@ -36,8 +42,8 @@
         <mjc-link href="https://jobs.cz">Primary link</mjc-link>
         <mjc-link href="https://jobs.cz" color="secondary">Secondary link</mjc-link>
         <mjc-link href="https://jobs.cz" size="small">Small font link</mjc-link>
-        
-      
+
+
         <mj-spacer height="150px" />
         <mj-text><strong>COMPONENT: Button</strong></mj-text>
         <mj-spacer height="10px" />

@@ -1,9 +1,9 @@
-# SASS
+# StyleSCSS
 
-THe mjc-sass is component for import .sass styles to template heading.
+The `mjc-style-scss` is component for import `.scss` files to the template head.
 
 ```mjml
-<mjc-scss fileUrl="./scss/Page.scss" inline="inline"></mjc-scss>
+<mjc-style-scss fileUrl="./scss/Page.scss" inline="inline"></mjc-style-scss>
 ```
 
 ## Available props

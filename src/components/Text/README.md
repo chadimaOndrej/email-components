@@ -1,9 +1,9 @@
 # Text
 
-The Text component to render text.
+The `mjc-text` component to render text.
 
 ```mjml
-<mjc-text color="seconrady" size="small">Text text text text</mjc-text>
+<mjc-text color="secondary" size="small">Text</mjc-text>
 ```
 
 ## Available props

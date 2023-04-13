@@ -1,20 +1,28 @@
 <mjml>
-  <mj-head>
-      <!-- <mjc-scss styleFileName="Page" inline /> -->
-  </mj-head>
+  <mj-head></mj-head>
   <mj-body css-class="Page" width="680px">
-    <!-- The first component, mj-basic-component renders as a column child -->
-    <mjc-header src="https://ijobs.cz/static/images/email/logo-jobs.png?1" imageAlt="jobs.cz logo" href="https://jobs.cz" />
-    
+    <mjc-header
+      externalLink="https://jobs.cz"
+      imageAlt="jobs.cz logo"
+      imageUrl="https://ijobs.cz/static/images/email/logo-jobs.png?1"
+    />
+
     <mjc-content>
       <mj-column>
-        <mjc-heading title="Ověření emailové adresy" hasSpacing="true"></mjc-heading>  
+        <mjc-heading title="Ověření emailové adresy" hasSpacing="true"></mjc-heading>
         <mjc-text>A super nice layout component</mjc-text>
-        <mjc-text padding-top="24px" color="secondary" size="small">Small text component, small text component, <strong>bold text</strong></mjc-text>
+        <mjc-text
+          color="secondary"
+          padding-top="24px"
+          size="small"
+        >
+          Small text component, small text component, <strong>bold text</strong>
+        </mjc-text>
 
         <mjc-link href="https://jobs.cz" color="secondary">Odkaz</mjc-link>
         <mjc-button href="https:/jobs.cz">Potvrdit e-mailovou adresu</mjc-button>
 
       </mj-column>
     </mjc-content>
+  </mj-body>
 </mjml>

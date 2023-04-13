@@ -1,6 +1,6 @@
 # Link
 
-The Link component to create link.
+The `mjc-link` component to create link.
 
 ```mjml
 <mjc-link href="www.sezam.cz" color="seconrady" size="small">Odkaz</mjc-link>
@@ -8,13 +8,12 @@ The Link component to create link.
 
 ## Available props
 
-| Name             | Type                               | Default   | Required | Description      |
-| ---------------- | ---------------------------------- | --------- | -------- | ---------------- |
-| `color`          | `primary \| secondary \| inverted` | `primary` | no       | Link color       |
-| `href`           | `string`                           | -         | yes      | Link to          |
-| `padding-bottom` | `unit(px,%)`                       | -         | no       | bottom spacing   |
-| `padding-top`    | `unit(px,%)`                       | -         | no       | top spacing      |
-| `padding`        | `unit(px){1,4}`                    | -         | no       | spacing          |
-| `rel`            | `string`                           | -         | no       |                  |
-| `size`           | `small \| medium`                  | `medium`  | no       | Size of the text |
-| `target`         | `string`                           | `_blank`  | no       |                  |
+| Name             | Type                               | Default   | Required | Description                                                      |
+| ---------------- | ---------------------------------- | --------- | -------- | ---------------------------------------------------------------- |
+| `color`          | `primary \| secondary \| inverted` | `primary` | no       | Link color                                                       |
+| `href`           | `string`                           | -         | yes      | Link to                                                          |
+| `padding-bottom` | `unit(px,%)`                       | -         | no       | Bottom spacing                                                   |
+| `padding-top`    | `unit(px,%)`                       | -         | no       | Top spacing                                                      |
+| `padding`        | `unit(px){1,4}`                    | -         | no       | Spacing                                                          |
+| `rel`            | `string`                           | -         | no       | Relationship between a linked resource and the current document. |
+| `size`           | `small \| medium`                  | `medium`  | no       | Size of the text                                                 |

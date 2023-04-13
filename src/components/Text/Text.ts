@@ -49,6 +49,6 @@ export default class MjcText extends BodyComponent {
       <div class="${className}">
         ${this.getContent()}
       </div>
-    `
+    `;
   }
 }

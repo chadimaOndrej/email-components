@@ -1,4 +1,3 @@
-@use '@tokens' as tokens;
 @use 'theme';
 @use 'tools';
 
@@ -8,25 +7,25 @@
     border-collapse: separate;
     line-height: 100%;
 
-    @media (min-width: tokens.$breakpoint-tablet) {
+    @media (min-width: theme.$breakpoint) {
         width: auto;
     }
 }
 
 .Button__cell {
     border: 0;
-    mso-padding-alt: tokens.$space-400;
+    mso-padding-alt: theme.$padding-button-mobile;
     border-radius: theme.$border-radius;
     cursor: auto;
 
-    @media (min-width: tokens.$breakpoint-tablet) {
-        mso-padding-alt: tokens.$space-400 calc(#{tokens.$space-1000} + #{tokens.$space-400});
+    @media (min-width: theme.$breakpoint) {
+        mso-padding-alt: theme.$padding-button;
     }
 }
 
 .Button__button {
     display: block;
-    padding: tokens.$space-400;
+    padding: theme.$padding-button-mobile;
     mso-padding-alt: 0px;
     font-style: normal;
     font-size: 16px;
@@ -40,8 +39,8 @@
     user-select: none;
     cursor: pointer;
 
-    @media (min-width: tokens.$breakpoint-tablet) {
-        padding: tokens.$space-400 calc(#{tokens.$space-1000} + #{tokens.$space-400});
+    @media (min-width: theme.$breakpoint) {
+        padding: theme.$padding-button;
         line-height: 1.8;
     }
 }

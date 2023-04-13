@@ -31,7 +31,6 @@ export default class Button extends BodyComponent {
     'padding-bottom': 'unit(px,%)',
     'padding-top': 'unit(px,%)',
     rel: 'string',
-    target: 'string',
     'vertical-align': 'enum(top,bottom,middle)',
   };
 
@@ -42,7 +41,6 @@ export default class Button extends BodyComponent {
     'padding-left': '0',
     'padding-right': '0',
     'padding-top': '32px',
-    target: '_blank',
     'vertical-align': 'middle',
   };
 
@@ -77,11 +75,12 @@ export default class Button extends BodyComponent {
                   href: this.getAttribute('href'),
                   rel: this.getAttribute('rel'),
                   name: this.getAttribute('name'),
-                  target: tag === 'a' ? this.getAttribute('target') : undefined,
                   'data-msys-linkname': tag === 'a' ? this.getAttribute('data-msys-linkname') : undefined,
                 })}
               >
-                ${this.getContent()}
+                <span class="Button--${this.color}">
+                  ${this.getContent()}
+                </span>                
               </${tag}>
             </td>
           </tr>

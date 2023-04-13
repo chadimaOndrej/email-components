@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use '@tokens' as tokens;
+
+$header-image-padding: tokens.$space-700;
+$header-background-backup: tokens.$brand-primary;
+$header-background: if(
+    meta.global-variable-exists(gradient-diagonal, tokens),
+    tokens.$gradient-diagonal,
+    tokens.$brand-primary
+);
