@@ -3,11 +3,7 @@
 .Header {
 }
 
-.Header__column {
+.Header__column { 
     background-color: theme.$header-background-backup;
     background: theme.$header-background;
-}
-
-.Header__image {
-    padding: theme.$header-image-padding;
 }

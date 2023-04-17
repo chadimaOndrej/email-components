@@ -33,8 +33,8 @@ export default class Scss extends HeadComponent {
       throw new Error(`Can't find scss file at ${filePath} (From)`);
     }
 
-    const scss = compile(filePath, { loadPaths: ['node_modules/@lmc-eu/spirit-design-tokens/scss'] }).css.toString();
-
-    add(this.getAttribute('inline') === 'inline' ? 'inlineStyle' : 'style', scss);
+    const css = compile(filePath, { loadPaths: ['node_modules/@lmc-eu/jobs-design-tokens/scss'] }).css.toString();
+    
+    add(this.getAttribute('inline') === 'inline' ? 'inlineStyle' : 'style', css);
   }
 }

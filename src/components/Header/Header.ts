@@ -65,10 +65,10 @@ export default class Header extends BodyComponent {
           <mj-image
             align="${this.align}"
             alt="${this.imageAlt}"
-            css-class="Header__image"
             height="${this.height}"
             href="${this.externalLink}"
-            imageUrl="${this.imageUrl}"
+            padding="0"
+            src="${this.imageUrl}"
             width="${this.width}"
           />
         </mj-column>

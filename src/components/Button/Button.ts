@@ -47,8 +47,7 @@ export default class Button extends BodyComponent {
   headStyle = () => loadStyles(`${__dirname}/Button.css`);
 
   render() {
-    const tag = this.getAttribute('href') ? 'a' : 'p';
-    const className = `Button__button Button--${this.color}`;
+    const className = `Button__link Button--${this.color}`;
     const classNameTd = `Button__cell Button--${this.color}`;
 
     return `
@@ -69,19 +68,19 @@ export default class Button extends BodyComponent {
                 class: classNameTd,
               })}
             >
-              <${tag}
+              <a
                 ${this.htmlAttributes({
                   class: className,
                   href: this.getAttribute('href'),
                   rel: this.getAttribute('rel'),
                   name: this.getAttribute('name'),
-                  'data-msys-linkname': tag === 'a' ? this.getAttribute('data-msys-linkname') : undefined,
+                  'data-msys-linkname': this.getAttribute('data-msys-linkname'),
                 })}
               >
                 <span class="Button--${this.color}">
                   ${this.getContent()}
                 </span>                
-              </${tag}>
+              </a>
             </td>
           </tr>
         </tbody>

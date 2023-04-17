@@ -10,7 +10,11 @@ registerDependencies({
 
 export default class Content extends BodyComponent {
   static componentName = 'mjc-content';
-
+  static dependencies = {
+    'mj-body': ['mjc-content'],
+    'mj-wrapper': ['mjc-content'],
+    'mjc-content': ['mj-column', 'mj-text', 'mjc-heading', 'mjc-button'],
+  };
   headStyle = () => loadStyles(`${__dirname}/Content.css`);
 
   render() {
