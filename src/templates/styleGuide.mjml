@@ -29,7 +29,7 @@
         <mj-text><strong>COMPONENT: Text</strong></mj-text>
         <mj-spacer height="10px" />
         <mjc-text>Medium text</mjc-text>
-        <mjc-text color="secondary" size="small">Medium text with secondary color, <strong>strong text</strong></mjc-text>
+        <mjc-text color="secondary">Medium text with secondary color, <strong>strong text</strong></mjc-text>
         <mjc-text size="small">Small text</mjc-text>
         <mjc-text color="secondary" size="small">Small text component with secondary color, <strong>strong text</strong></mjc-text>
 

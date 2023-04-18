@@ -1,7 +1,7 @@
 {
-  "name": "@lmc-eu/email-components",
+  "name": "@lmc-eu/jobs-email-components",
   "version": "0.0.1",
-  "description": "CSS and vanilla JS implementation of Spirit Design System",
+  "description": "Email components for mjml.",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
@@ -14,20 +14,23 @@
   "source": "src/index.ts",
   "main": "lib/index.js",
   "scripts": {
-    "css:compile": "sass --load-path=node_modules/@lmc-eu/spirit-design-tokens/scss src:dist",
-    "css:compile:watch": "sass --watch --load-path=node_modules/@lmc-eu/spirit-design-tokens/scss src:dist",
+    "css:compile": "sass --load-path=node_modules/@lmc-eu/jobs-design-tokens/scss src:dist",
+    "css:compile:watch": "sass --watch --load-path=node_modules/@lmc-eu/jobs-design-tokens/scss src:dist",
     "es:lint": "eslint ./",
     "es:lint:fix": "yarn es:lint --fix",
     "format": "yarn format:check",
     "format:check": "prettier --check ./",
     "format:fix": "prettier --write ./",
     "format:fix:changelog": "prettier --write ./CHANGELOG.md",
+    "lint:styles:default": "stylelint './**/*.scss'",
     "postinstall": "yarn build",
     "register-components": "node registerComponents.js",
     "build": "yarn build:scripts && yarn css:compile",
     "build:scripts": "tsc",
+    "watch": "yarn css:compile:watch && tsc --watch && yarn watch:template",
     "prebuild:template": "yarn build",
-    "build:template": "mjml index.mjml -o index.html && mjml ./src/templates/**.mjml -o ./html-output/"
+    "build:template": "mjml index.mjml -o index.html && mjml ./src/templates/**.mjml -o ./html-output/",
+    "watch:template": "mjml --watch index.mjml -o index.html && mjml ./src/templates/**.mjml -o ./html-output/"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -36,6 +39,7 @@
     "@babel/preset-typescript": "^7.21.0",
     "@babel/register": "^7.21.0",
     "@lmc-eu/eslint-config-base": "^1.1.6",
+    "@lmc-eu/jobs-design-tokens": "^1.6.0",
     "@lmc-eu/prettier-config": "^1.2.4",
     "@lmc-eu/stylelint-config": "^5.0.0",
     "@types/jest": "^27.0.3",
@@ -52,6 +56,9 @@
     "prettier": "^2.8.7",
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-prettier": "^2.0.0",
     "typescript": "^4.9.5",
     "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"

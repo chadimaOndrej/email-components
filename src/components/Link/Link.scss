@@ -1,8 +1,9 @@
 @use 'theme';
+@use '../../templates/scss/tools/index.scss' as dictionaries;
 
 .Link {
-    font-family: Arial, sans-serif;
     font-style: normal;
+    font-family: Arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.8;
@@ -13,17 +14,10 @@
     }
 }
 
-.Link--primary {
-    color: theme.$primary;
-}
-
-.Link--secondary {
-    color: theme.$secondary;
-}
-
-.Link--inverted {
-    color: theme.$inverted;
-}
+@include dictionaries.generate-colors(
+    'Link',
+    theme.$colors
+);
 
 .Link--small {
     font-size: 14px;

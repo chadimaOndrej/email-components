@@ -4,6 +4,6 @@
 }
 
 .Header__column { 
-    background-color: theme.$header-background-backup;
     background: theme.$header-background;
+    background-color: theme.$header-background-backup;
 }

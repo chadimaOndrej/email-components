@@ -21,7 +21,6 @@
 
         <mjc-link href="https://jobs.cz" color="secondary">Odkaz</mjc-link>
         <mjc-button href="https:/jobs.cz">Potvrdit e-mailovou adresu</mjc-button>
-
       </mj-column>
     </mjc-content>
   </mj-body>
