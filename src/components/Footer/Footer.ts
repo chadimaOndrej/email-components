@@ -1,5 +1,5 @@
 import { BodyComponent } from 'mjml-core';
-import { loadStyles } from '../../helpers/loadStyles';
+import { loadComponentStyles } from '../../scssLoaders/loadComponentStyles';
 const { registerDependencies } = require('mjml-validator');
 
 registerDependencies({
@@ -54,7 +54,7 @@ export default class Footer extends BodyComponent {
     width: '60px',
   };
 
-  headStyle = () => loadStyles(`${__dirname}/Footer.css`);
+  headStyle = () => loadComponentStyles(`${__dirname}/Footer.css`);
 
   render() {
     return this.renderMJML(`

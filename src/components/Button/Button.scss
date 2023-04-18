@@ -5,7 +5,6 @@
     width: 100%;
     border: 0;
     border-collapse: separate;
-    line-height: 100%;
 
     @media (min-width: theme.$breakpoint) {
         width: auto;
@@ -19,17 +18,15 @@
     cursor: auto;
 
     @media (min-width: theme.$breakpoint) {
-        mso-padding-alt: theme.$padding-button;
+        mso-padding-alt: theme.$padding-button-tablet;
     }
 }
 
 .Button__link {
     display: block;
     padding: theme.$padding-button-mobile;
-    mso-padding-alt: 0px;
+    mso-padding-alt: 0;
     font-style: normal;
-    font-size: 16px;
-    line-height: 1.5;
     font-family: Arial, sans-serif;
     text-align: center;
     text-decoration: none;
@@ -40,8 +37,7 @@
     cursor: pointer;
 
     @media (min-width: theme.$breakpoint) {
-        padding: theme.$padding-button;
-        line-height: 1.8;
+        padding: theme.$padding-button-tablet;
     }
 }
 

@@ -1,9 +1,9 @@
 # StyleSCSS
 
-The `mjc-style-scss` is component for import `.scss` files to the template head.
+The `mjc-head-styles` is component for import `.scss` files to the template head.
 
 ```mjml
-<mjc-style-scss fileUrl="./scss/Page.scss" inline="inline"></mjc-style-scss>
+<mjc-head-styles fileUrl="./scss/Page.scss" inline="inline"></mjc-head-styles>
 ```
 
 ## Available props

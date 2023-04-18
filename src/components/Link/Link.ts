@@ -1,5 +1,5 @@
 import { BodyComponent } from 'mjml-core';
-import { loadStyles } from '../../helpers/loadStyles';
+import { loadComponentStyles } from '../../scssLoaders/loadComponentStyles';
 const { registerDependencies } = require('mjml-validator');
 
 registerDependencies({
@@ -43,7 +43,7 @@ export default class MjcText extends BodyComponent {
     size: 'medium',
   };
 
-  headStyle = () => loadStyles(`${__dirname}/Link.css`);
+  headStyle = () => loadComponentStyles(`${__dirname}/Link.css`);
 
   render() {
     const className = `Link Link--${this.size} Link--${this.color}`;

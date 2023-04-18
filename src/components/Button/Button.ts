@@ -1,5 +1,5 @@
 import { BodyComponent } from 'mjml-core';
-import { loadStyles } from '../../helpers/loadStyles';
+import { loadComponentStyles } from '../../scssLoaders/loadComponentStyles';
 const { registerDependencies } = require('mjml-validator');
 
 registerDependencies({
@@ -44,7 +44,7 @@ export default class Button extends BodyComponent {
     'vertical-align': 'middle',
   };
 
-  headStyle = () => loadStyles(`${__dirname}/Button.css`);
+  headStyle = () => loadComponentStyles(`${__dirname}/Button.css`);
 
   render() {
     const className = `Button__link Button--${this.color}`;
@@ -79,7 +79,7 @@ export default class Button extends BodyComponent {
               >
                 <span class="Button--${this.color}">
                   ${this.getContent()}
-                </span>                
+                </span>
               </a>
             </td>
           </tr>

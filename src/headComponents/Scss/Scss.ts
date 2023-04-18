@@ -5,8 +5,8 @@ import { compile } from 'sass';
 const { registerDependencies } = require('mjml-validator');
 
 registerDependencies({
-  'mj-head': ['mjc-style-scss'],
-  'mjc-style-scss': [],
+  'mj-head': ['mjc-head-styles'],
+  'mjc-head-styles': [],
 });
 
 interface Props {
@@ -15,11 +15,11 @@ interface Props {
 }
 
 export default class Scss extends HeadComponent {
-  static componentName = 'mjc-style-scss';
+  static componentName = 'mjc-head-styles';
   static endingTag = true;
   static dependencies = {
-    'mj-head': ['mjc-style-scss'],
-    'mjc-style-scss': [],
+    'mj-head': ['mjc-head-styles'],
+    'mjc-head-styles': [],
   };
   static allowedAttributes: Props = {
     fileUrl: 'string',
@@ -34,7 +34,7 @@ export default class Scss extends HeadComponent {
     }
 
     const css = compile(filePath, { loadPaths: ['node_modules/@lmc-eu/jobs-design-tokens/scss'] }).css.toString();
-    
+
     add(this.getAttribute('inline') === 'inline' ? 'inlineStyle' : 'style', css);
   }
 }

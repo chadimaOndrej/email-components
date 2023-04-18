@@ -1,30 +1,15 @@
+@use 'sass:map';
 @use 'theme';
 
-.Text {
-    font-family: Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.8;
-
-    @media (min-width: theme.$breakpoint) {
-        font-size: 18px;
+@each $size-name, $size-variables in theme.$sizes {
+    .Text--#{$size-name} {
+        font-size: map.get($size-variables, font-size);
+        line-height: map.get($size-variables, line-height);
     }
 }
 
-.Text--primary {
-    color: theme.$primary;
-}
-
-.Text--secondary {
-    color: theme.$secondary;
-}
-
-.Text--inverted {
-    color: theme.$inverted;
-}
-
-.Text--small {
-    font-size: 14px;
-    line-height: 1.4;
+@each $color-name, $color-value in theme.$colors {
+    .Text--#{$color-name} {
+        color: $color-value;
+    }
 }

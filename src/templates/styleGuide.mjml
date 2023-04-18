@@ -1,6 +1,6 @@
 <mjml>
   <mj-head>
-    <mjc-style-scss fileUrl="templates/scss/Page.scss" inline />
+    <mjc-head-styles fileUrl="src/templates/scss/foundation/index.scss" inline />
   </mj-head>
   <mj-body css-class="Page" width="680px">
     <mjc-content>

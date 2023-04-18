@@ -1,5 +1,5 @@
 import { BodyComponent } from 'mjml-core';
-import { loadStyles } from '../../helpers/loadStyles';
+import { loadComponentStyles } from '../../scssLoaders/loadComponentStyles';
 const { registerDependencies } = require('mjml-validator');
 
 registerDependencies({
@@ -15,11 +15,11 @@ export default class Content extends BodyComponent {
     'mj-wrapper': ['mjc-content'],
     'mjc-content': ['mj-column', 'mj-text', 'mjc-heading', 'mjc-button'],
   };
-  headStyle = () => loadStyles(`${__dirname}/Content.css`);
+  headStyle = () => loadComponentStyles(`${__dirname}/Content.css`);
 
   render() {
     return `
-      <div class="Content">  
+      <div class="Content">
         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
           <tbody>
             <tr>

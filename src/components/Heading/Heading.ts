@@ -1,5 +1,5 @@
 import { BodyComponent } from 'mjml-core';
-import { loadStyles } from '../../helpers/loadStyles';
+import { loadComponentStyles } from '../../scssLoaders/loadComponentStyles';
 const { registerDependencies } = require('mjml-validator');
 
 registerDependencies({
@@ -45,7 +45,7 @@ export default class Heading extends BodyComponent {
     size: 'medium',
   };
 
-  headStyle = () => loadStyles(`${__dirname}/Heading.css`);
+  headStyle = () => loadComponentStyles(`${__dirname}/Heading.css`);
 
   render() {
     const className = `Heading Heading--${this.size}${this.hasSpacing ? ' Heading--hasBottomSpacing' : ''}`;
