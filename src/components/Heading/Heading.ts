@@ -11,7 +11,6 @@ registerDependencies({
 export default class Heading extends BodyComponent {
   private readonly align: string;
   private readonly elementType: string;
-  private readonly hasSpacing: boolean;
   private readonly size: string;
   private readonly title: string;
 
@@ -20,7 +19,6 @@ export default class Heading extends BodyComponent {
 
     this.align = this.getAttribute('align');
     this.elementType = this.getAttribute('elementType');
-    this.hasSpacing = this.getAttribute('hasSpacing');
     this.size = this.getAttribute('size');
     this.title = this.getAttribute('title');
   }
@@ -33,7 +31,6 @@ export default class Heading extends BodyComponent {
 
   static allowedAttributes = {
     align: 'enum(left,right,center)',
-    hasSpacing: 'boolean',
     elementType: 'enum(div,h1,h2,h3,h4,p,span)',
     size: 'enum(small,medium,large)',
     title: 'string',
@@ -48,7 +45,7 @@ export default class Heading extends BodyComponent {
   headStyle = () => loadComponentStyles(`${__dirname}/Heading.css`);
 
   render() {
-    const className = `Heading Heading--${this.size}${this.hasSpacing ? ' Heading--hasBottomSpacing' : ''}`;
+    const className = `Heading Heading--${this.size}`;
 
     return `
       <table

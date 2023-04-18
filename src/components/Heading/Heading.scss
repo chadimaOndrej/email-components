@@ -1,28 +1,13 @@
 @use 'theme';
+@use '../../templates/scss/@email-tokens' as email-tokens;
+@use '../../templates/scss/tools/dictionaries' as dictionaries;
 
 .Heading {
-    font-style: normal;
-    font-family: Arial, sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
+    margin-bottom: email-tokens.$text-medium-font-size;
+    font-weight: email-tokens.$font-weight-bold;
 }
 
-.Heading--hasBottomSpacing {
-    padding-bottom: theme.$heading-padding-bottom-mobile;
-
-    @media (min-width: theme.$breakpoint) {
-        padding-bottom: theme.$heading-padding-bottom;
-    }
-}
-
-.Heading--small {
-    font-size: 20px;
-}
-
-.Heading--medium {
-    font-size: 26px;
-
-    @media (min-width: theme.$breakpoint) {
-        font-size: 28px;
-    }
-}
+@include dictionaries.generate-typography-sizes(
+    'Heading',
+    theme.$sizes
+);

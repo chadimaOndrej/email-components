@@ -9,7 +9,7 @@
 
     <mjc-content>
       <mj-column>
-        <mjc-heading title="Ověření emailové adresy" hasSpacing="true"></mjc-heading>
+        <mjc-heading title="Ověření emailové adresy"></mjc-heading>
         <mjc-text>A super nice layout component</mjc-text>
         <mjc-text
           color="secondary"

@@ -20,8 +20,8 @@
         <mj-spacer height="100px" />
         <mj-text><strong>COMPONENT: Heading</strong></mj-text>
         <mj-spacer height="10px" />
-        <mjc-heading title="Heading small" size="small" hasSpacing="true"></mjc-heading>
-        <mjc-heading title="Heading medium" hasSpacing="true"></mjc-heading>
+        <mjc-heading title="Heading small" size="small"></mjc-heading>
+        <mjc-heading title="Heading medium"></mjc-heading>
         <mjc-heading title="Heading center" align="center"></mjc-heading>
 
 

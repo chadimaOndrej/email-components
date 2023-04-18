@@ -13,23 +13,22 @@
 
 .Button__cell {
     border: 0;
-    mso-padding-alt: theme.$padding-button-mobile;
+    mso-padding-alt: theme.$padding-y-mobile theme.$padding-x-mobile;
     border-radius: theme.$border-radius;
     cursor: auto;
 
     @media (min-width: theme.$breakpoint) {
-        mso-padding-alt: theme.$padding-button-tablet;
+        mso-padding-right-alt: theme.$padding-x-tablet;
+        mso-padding-left-alt: theme.$padding-x-tablet;
     }
 }
 
 .Button__link {
     display: block;
-    padding: theme.$padding-button-mobile;
+    padding: theme.$padding-y-mobile theme.$padding-x-mobile;
     mso-padding-alt: 0;
-    font-style: normal;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
+    font-size: theme.$font-size-mobile;
+    line-height: theme.$line-height-mobile;
     text-align: center;
     text-decoration: none;
     border-width: theme.$border-width;
@@ -39,10 +38,12 @@
     cursor: pointer;
 
     @media (min-width: theme.$breakpoint) {
-        padding: theme.$padding-button-tablet;
+        padding-inline: theme.$padding-x-tablet;
+        font-size: theme.$font-size-tablet;
+        line-height: theme.$line-height-tablet;
     }
 }
 
-@each $variant, $variables in theme.$variants {
-    @include tools.variant($variant, $variables);
+@each $color-name, $color-variables in theme.$colors {
+    @include tools.variant($color-name, $color-variables);
 }

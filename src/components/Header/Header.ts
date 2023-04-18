@@ -60,8 +60,8 @@ export default class Header extends BodyComponent {
 
   render() {
     return this.renderMJML(`
-      <mj-section css-class="Header" padding="0">
-        <mj-column css-class="Header__column" padding="22px">
+      <mj-section padding="0">
+        <mj-column css-class="Header" padding="22px">
           <mj-image
             align="${this.align}"
             alt="${this.imageAlt}"

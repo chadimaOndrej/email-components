@@ -1,9 +1,6 @@
 @use 'theme';
 
 .Header {
-}
-
-.Header__column { 
-    background: theme.$header-background;
-    background-color: theme.$header-background-backup;
+    background-color: theme.$background-backup;
+    background: theme.$background;
 }

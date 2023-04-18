@@ -12,6 +12,5 @@ The `mjc-heading` component is to create e-mail headings.
 | ------------- | -------------------------- | -------- | ---------------- |
 | `align`       | `left \| right \| center`  | `left`   | Text position    |
 | `elementType` | `HTMLElement`              | `div`    | HTML tag,        |
-| `hasSpacing`  | `boolean`                  | `false`  | Bottom spacing   |
 | `size`        | `small \| medium \| large` | `medium` | Size of the text |
 | `title`       | `string`                   |          | Title            |

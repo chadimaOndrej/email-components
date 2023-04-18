@@ -1,18 +1,1 @@
-@use 'sass:map';
-
-@mixin generate-colors($class-name, $dictionary-values) {
-    @each $dictionary-name, $dictionary-value in $dictionary-values {
-        .#{$class-name}--#{$dictionary-name} {
-            color: $dictionary-value;
-        }
-    }
-}
-
-@mixin generate-typography-sizes($class-name, $dictionary-values) {
-    @each $dictionary-name, $dictionary-variables in $dictionary-values {
-        .#{$class-name}--#{$dictionary-name} {
-            font-size: map.get($size-variables, font-size);
-            line-height: map.get($size-variables, line-height);
-        }
-    }
-}
+@forward 'dictionaries';

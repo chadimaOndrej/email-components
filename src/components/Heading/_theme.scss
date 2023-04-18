@@ -1,7 +1,27 @@
 @use 'sass:map';
 @use '@tokens' as tokens;
+@use '../../templates/scss/@email-tokens' as email-tokens;
 
 $breakpoint: tokens.$breakpoint-tablet;
 
-$heading-padding-bottom-mobile: tokens.$space-700;
-$heading-padding-bottom: tokens.$space-800;
+$sizes: (
+    medium: (
+        mobile: (
+            // Cannot inherit font size from html element because parent table cell drops its size to zero.
+            font-size: email-tokens.$heading-medium-font-size-mobile,
+            line-height: email-tokens.$heading-line-height,
+        ),
+        // TODO: Make medium heading responsive as well.
+    ),
+    large: (
+        mobile: (
+            font-size: email-tokens.$heading-large-font-size-mobile,
+            line-height: email-tokens.$heading-line-height,
+        ),
+        tablet: (
+            font-size: email-tokens.$heading-large-font-size-tablet,
+            line-height: email-tokens.$heading-line-height,
+        ),
+    ),
+);
+

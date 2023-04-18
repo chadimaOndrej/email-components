@@ -2,7 +2,6 @@
 @use '@tokens' as tokens;
 @use '../../templates/scss/@email-tokens' as email-tokens;
 
-
 $breakpoint: tokens.$breakpoint-tablet;
 
 $colors: (
@@ -13,15 +12,28 @@ $colors: (
 
 $sizes: (
     small: (
-        font-size: email-tokens.$text-small-font-size,
-        line-height: email-tokens.$text-small-line-height,
+        mobile: (
+            font-size: email-tokens.$text-small-font-size,
+            line-height: email-tokens.$text-small-line-height,
+        ),
+        // TODO: Make small texts responsive as well.
     ),
     medium: (
-        font-size: email-tokens.$text-medium-font-size,
-        line-height: email-tokens.$text-medium-line-height,
+        mobile: (
+            // Cannot inherit font size from html element because parent table cell drops its size to zero.
+            font-size: email-tokens.$text-medium-font-size,
+            line-height: email-tokens.$text-medium-line-height,
+        ),
+        tablet: (
+            font-size: email-tokens.$text-large-font-size,
+            line-height: email-tokens.$text-large-line-height,
+        ),
     ),
     large: (
-        font-size: email-tokens.$text-large-font-size,
-        line-height: email-tokens.$text-large-line-height,
+        mobile: (
+            font-size: email-tokens.$text-large-font-size,
+            line-height: email-tokens.$text-large-line-height,
+        ),
+        // TODO: Make large texts responsive as well.
     ),
 );

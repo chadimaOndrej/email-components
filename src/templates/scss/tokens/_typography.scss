@@ -9,10 +9,18 @@ $text-medium-line-height: 1.8;
 $text-large-line-height: 1.8;
 
 // Heading font size
-$heading-medium-font-size: 20px;
+$heading-medium-font-size-mobile: 22px;
+// TODO: Responsive font size?
+
+$heading-large-font-size-mobile: 24px;
+$heading-large-font-size-tablet: 26px;
+
+// TODO: One line height to rule them all?
+$heading-line-height: 1.5;
 
 // Font weights
 $font-weight-normal: 400;
+$font-weight-bold: 700;
 
 // Font families
 $font-family-base: Arial, sans-serif;

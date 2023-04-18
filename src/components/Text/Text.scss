@@ -1,15 +1,13 @@
 @use 'sass:map';
 @use 'theme';
+@use '../../templates/scss/tools/dictionaries' as dictionaries;
 
-@each $size-name, $size-variables in theme.$sizes {
-    .Text--#{$size-name} {
-        font-size: map.get($size-variables, font-size);
-        line-height: map.get($size-variables, line-height);
-    }
-}
+@include dictionaries.generate-typography-sizes(
+    'Text',
+    theme.$sizes
+);
 
-@each $color-name, $color-value in theme.$colors {
-    .Text--#{$color-name} {
-        color: $color-value;
-    }
-}
+@include dictionaries.generate-colors(
+    'Text',
+    theme.$colors
+);
