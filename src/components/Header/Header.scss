@@ -1,6 +1,6 @@
 @use 'theme';
 
 .Header {
-    background-color: theme.$background-backup;
+    background: theme.$background-backup;
     background: theme.$background;
 }

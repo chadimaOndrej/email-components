@@ -7,7 +7,4 @@
     font-weight: email-tokens.$font-weight-bold;
 }
 
-@include dictionaries.generate-typography-sizes(
-    'Heading',
-    theme.$sizes
-);
+@include dictionaries.generate-typography-sizes('Heading', theme.$sizes);

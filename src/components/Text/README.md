@@ -8,7 +8,11 @@ The `mjc-text` component to render text.
 
 ## Available props
 
-| Name    | Type                               | Default   | Description      |
-| ------- | ---------------------------------- | --------- | ---------------- |
-| `color` | `primary \| secondary \| inverted` | `primary` | Text color       |
-| `size`  | `small \| medium`                  | `medium`  | Size of the text |
+| Name             | Type                               | Default   | Required | Description      |
+| ---------------- | ---------------------------------- | --------- | -------- | ---------------- |
+| `align`          | `left \| center \| right`          | `left`    | no       | Text aligment    |
+| `color`          | `primary \| secondary \| inverted` | `primary` | no       | Text color       |
+| `padding-bottom` | `unit(px,%)`                       |           | no       | Bottom spacing   |
+| `padding-top`    | `unit(px,%)`                       |           | no       | Top spacing      |
+| `padding`        | `unit(px,%){1,4}`                  |           | no       | Spacing          |
+| `size`           | `small \| medium`                  | `medium`  | no       | Size of the text |

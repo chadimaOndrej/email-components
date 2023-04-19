@@ -20,7 +20,6 @@ $sizes: (
     ),
     medium: (
         mobile: (
-            // Cannot inherit font size from html element because parent table cell drops its size to zero.
             font-size: email-tokens.$text-medium-font-size,
             line-height: email-tokens.$text-medium-line-height,
         ),

@@ -10,6 +10,7 @@ The `mjc-link` component to create link.
 
 | Name             | Type                               | Default   | Required | Description                                                      |
 | ---------------- | ---------------------------------- | --------- | -------- | ---------------------------------------------------------------- |
+| `align`          | `left \| center \| right`          | `left`    | no       | Text aligment                                                    |
 | `color`          | `primary \| secondary \| inverted` | `primary` | no       | Link color                                                       |
 | `href`           | `string`                           | -         | yes      | Link to                                                          |
 | `padding-bottom` | `unit(px,%)`                       | -         | no       | Bottom spacing                                                   |

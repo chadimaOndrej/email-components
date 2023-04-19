@@ -7,7 +7,6 @@ $breakpoint: tokens.$breakpoint-tablet;
 $sizes: (
     medium: (
         mobile: (
-            // Cannot inherit font size from html element because parent table cell drops its size to zero.
             font-size: email-tokens.$heading-medium-font-size-mobile,
             line-height: email-tokens.$heading-line-height,
         ),
@@ -24,4 +23,3 @@ $sizes: (
         ),
     ),
 );
-

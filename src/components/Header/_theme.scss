@@ -9,5 +9,4 @@ $background-value: $background-backup;
     $background-value: tokens.$gradient-diagonal;
 }
 
-// TODO: Re-test the gradient!
 $background: $background-value;

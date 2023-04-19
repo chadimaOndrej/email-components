@@ -3,4 +3,12 @@
  */
 module.exports = {
     extends: ['@lmc-eu/stylelint-config', 'stylelint-prettier/recommended'],
+    rules: {
+        'property-no-unknown': [
+            true,
+            {
+                ignoreProperties: ['/^mso-/'],
+            },
+        ],
+    },
 };

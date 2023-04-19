@@ -2,11 +2,11 @@
 @use '../@email-tokens' as email-tokens;
 
 html {
-    font-weight: email-tokens.$font-weight-normal;
-    font-family: email-tokens.$font-family-base;
-    font-size: email-tokens.$text-medium-font-size;
     font-style: normal;
+    font-weight: email-tokens.$font-weight-normal;
+    font-size: email-tokens.$text-medium-font-size;
     line-height: email-tokens.$text-medium-line-height;
+    font-family: email-tokens.$font-family-base;
 
     @media (min-width: tokens.$breakpoint-tablet) {
         font-size: email-tokens.$text-large-font-size;
