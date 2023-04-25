@@ -1,0 +1,5 @@
+@use '../../../../node_modules/@lmc-eu/spirit-design-tokens/scss/@tokens' as tokens;
+
+.Page {
+    background: tokens.$background-backdrop;
+}

@@ -1,0 +1,38 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all
+        font-family="Arial, -apple-system, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif"
+        font-size="16px"
+        line-height="27px"
+      />
+      <mj-section background-color="transparent" padding="0px" />
+      <mj-divider border-width="1px" border-color="#E2E8ED" border-style="solid" />
+      <mj-spacer height="32px" />
+    </mj-attributes>
+    <mj-style inline="inline">
+      body { font-family: Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif; font-size:
+      16px; }
+    </mj-style>
+  </mj-head>
+  <mj-body css-class="Page" width="680px">
+    <mjc-header
+      externalLink="https://jobs.cz"
+      imageAlt="jobs.cz logo"
+      imageUrl="https://ijobs.cz/static/images/email/logo-jobs.png?1"
+    />
+
+    <mjc-content>
+      <mj-column>
+        <mjc-heading title="Ověření emailové adresy"></mjc-heading>
+        <mjc-text>A super nice layout component</mjc-text>
+        <mjc-text color="secondary" padding-top="24px" size="small">
+          Small text component, small text component, <strong>bold text</strong>
+        </mjc-text>
+
+        <mjc-link href="https://jobs.cz" color="secondary">Odkaz</mjc-link>
+        <mjc-button href="https:/jobs.cz">Potvrdit e-mailovou adresu</mjc-button>
+      </mj-column>
+    </mjc-content>
+  </mj-body>
+</mjml>
